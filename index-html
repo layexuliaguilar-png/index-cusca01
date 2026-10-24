@@ -3,140 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Victor Hugo Rios Linares | Consultoría y Asesoría Profesional</title>
-    <meta name="description" content="Servicios de consultoría profesional y asesoría estratégica para personas y empresas. Atención personalizada y confidencial por Victor Hugo Rios Linares.">
+    <title>Consultoría y Asesoría Profesional | Nombre de tu Empresa</title>
+    <meta name="description" content="Servicios profesionales de consultoría y asesoría estratégica para personas y empresas. Atención personalizada, transparente y confidencial.">
+    <meta name="robots" content="index, follow">
     
     <!-- Fuentes de Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     
-    <!-- CSS Integrado para que no falle -->
     <style>
         :root {
-            --primary: #0A1628; /* Azul profundo */
-            --accent: #C9A961;  /* Dorado */
-            --bg: #F8F9FA;
-            --text: #333;
-            --text-light: #666;
-            --white: #FFF;
+            --primary: #1E3A8A; /* Azul oscuro profesional */
+            --accent: #3B82F6;  /* Azul brillante */
+            --bg: #F3F4F6;
+            --text: #1F2937;
+            --white: #FFFFFF;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Open Sans', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
         a { text-decoration: none; color: inherit; }
         ul { list-style: none; }
-        img { max-width: 100%; display: block; }
-        h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; color: var(--primary); }
-
-        .container { width: 90%; max-width: 1200px; margin: 0 auto; }
-
-        /* Banner de Advertencia (Anti-Suspensión Google Ads) */
-        .legal-banner { background: var(--primary); color: var(--white); text-align: center; padding: 12px; font-size: 0.85rem; border-bottom: 3px solid var(--accent); }
-        .legal-banner strong { color: var(--accent); }
-
-        /* Header */
-        header { background: var(--white); padding: 15px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
-        .header-grid { display: flex; justify-content: space-between; align-items: center; }
-        .logo h1 { font-size: 1.3rem; font-weight: 800; text-transform: uppercase; }
-        .logo span { color: var(--accent); }
-        nav ul { display: flex; gap: 20px; font-weight: 600; font-size: 0.9rem; }
-        nav a:hover { color: var(--accent); }
         
-        /* Botones */
-        .btn { display: inline-block; padding: 12px 24px; background: var(--accent); color: var(--primary); font-weight: 800; border-radius: 4px; transition: 0.3s; font-family: 'Montserrat', sans-serif; border: none; cursor: pointer; text-transform: uppercase; letter-spacing: 1px; }
-        .btn:hover { background: #b8962e; transform: translateY(-2px); color: var(--white); }
-        .btn-outline { background: transparent; border: 2px solid var(--accent); color: var(--accent); }
-        .btn-outline:hover { background: var(--accent); color: var(--primary); }
+        /* Header */
+        header { background: var(--primary); color: var(--white); padding: 20px 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .container { width: 90%; max-width: 1100px; margin: 0 auto; }
+        .nav-wrapper { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.5px; }
+        nav ul { display: flex; gap: 20px; font-weight: 600; font-size: 0.9rem; }
+        nav a:hover { color: #93C5FD; }
 
         /* Hero */
-        .hero { background: linear-gradient(rgba(10, 22, 40, 0.85), rgba(10, 22, 40, 0.85)), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1920&q=80') center/cover; padding: 100px 20px; text-align: center; color: var(--white); }
-        .hero h2 { font-size: clamp(2rem, 5vw, 3.5rem); color: var(--white); margin-bottom: 20px; line-height: 1.2; }
-        .hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto 30px; opacity: 0.9; }
+        .hero { background: var(--white); padding: 80px 0; text-align: center; border-bottom: 1px solid #E5E7EB; }
+        .hero h1 { font-size: clamp(2rem, 5vw, 3rem); color: var(--primary); margin-bottom: 20px; line-height: 1.2; }
+        .hero p { font-size: 1.1rem; color: #4B5563; max-width: 700px; margin: 0 auto 30px; }
+        .btn { display: inline-block; padding: 14px 28px; background: var(--accent); color: var(--white); font-weight: 700; border-radius: 6px; transition: 0.3s; border: none; cursor: pointer; }
+        .btn:hover { background: var(--primary); transform: translateY(-2px); }
 
         /* Servicios */
         .services { padding: 80px 0; }
-        .section-title { text-align: center; font-size: 2.2rem; margin-bottom: 40px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
-        .card { background: var(--white); border-radius: 8px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: 0.3s; border-top: 4px solid var(--accent); }
-        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
-        .card img { width: 100%; height: 200px; object-fit: cover; }
-        .card-content { padding: 30px; text-align: center; }
-        .card h3 { font-size: 1.3rem; margin-bottom: 15px; }
-        .card p { color: var(--text-light); font-size: 0.95rem; }
-
-        /* Sobre Mí */
-        .about { background: var(--white); padding: 80px 0; border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
-        .about-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 50px; align-items: center; }
-        .about-img { border-radius: 8px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-        .about-text h2 { font-size: 2rem; margin-bottom: 20px; color: var(--primary); }
-        .about-text p { margin-bottom: 15px; font-size: 1.05rem; color: var(--text-light); }
-        .about-text ul { margin-top: 20px; }
-        .about-text li { margin-bottom: 10px; position: relative; padding-left: 25px; font-weight: 600; color: var(--primary); }
-        .about-text li::before { content: '✓'; position: absolute; left: 0; color: var(--accent); font-weight: 800; font-size: 1.2rem; }
+        .section-title { text-align: center; font-size: 2rem; color: var(--primary); margin-bottom: 40px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .card { background: var(--white); padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-top: 4px solid var(--accent); text-align: center; }
+        .card h3 { font-size: 1.2rem; margin-bottom: 10px; color: var(--primary); }
+        .card p { color: #4B5563; font-size: 0.95rem; }
 
         /* Contacto */
-        .contact { padding: 80px 0; background: var(--primary); color: var(--white); }
-        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
-        .contact-info h2 { color: var(--white); font-size: 2rem; margin-bottom: 20px; }
-        .contact-info p { color: #bbb; margin-bottom: 30px; }
-        .contact-list li { display: flex; gap: 15px; margin-bottom: 20px; color: #ddd; }
-        .contact-form-wrap { background: var(--white); padding: 40px; border-radius: 8px; }
+        .contact { background: var(--primary); color: var(--white); padding: 80px 0; }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+        .contact-info h2 { font-size: 2rem; margin-bottom: 20px; }
+        .contact-info p { color: #D1D5DB; margin-bottom: 30px; }
+        .info-item { margin-bottom: 15px; font-size: 1rem; }
+        .contact-form { background: var(--white); padding: 40px; border-radius: 8px; color: var(--text); }
         .form-group { margin-bottom: 20px; }
-        .form-group label { display: block; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 0.9rem; margin-bottom: 8px; color: var(--primary); }
-        .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; font-family: 'Open Sans', sans-serif; }
+        .form-group label { display: block; font-weight: 600; font-size: 0.9rem; margin-bottom: 5px; }
+        .form-group input, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #D1D5DB; border-radius: 4px; font-family: inherit; }
         .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--accent); }
-        .checkbox-group { display: flex; gap: 10px; align-items: flex-start; }
+        .checkbox-group { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 20px; }
         .checkbox-group input { width: auto; margin-top: 4px; }
-        .checkbox-group label { font-family: 'Open Sans', sans-serif; font-weight: 400; color: var(--text-light); font-size: 0.85rem; }
-        .checkbox-group a { color: var(--primary); text-decoration: underline; }
+        .checkbox-group label { font-weight: 400; font-size: 0.85rem; color: #6B7280; }
+        .checkbox-group a { color: var(--accent); text-decoration: underline; }
 
         /* Footer */
-        footer { background: #050D1A; color: #888; padding: 40px 0 20px; font-size: 0.85rem; }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 30px; }
-        .footer-grid h4 { color: var(--white); margin-bottom: 15px; font-size: 1.1rem; }
-        .legal-disclaimer { background: #0F1F3A; padding: 20px; border-left: 4px solid var(--accent); margin-bottom: 30px; border-radius: 4px; color: #ccc; }
-        .legal-disclaimer strong { color: var(--accent); }
-        .copyright { text-align: center; border-top: 1px solid #222; padding-top: 20px; }
+        footer { background: #111827; color: #9CA3AF; padding: 40px 0 20px; font-size: 0.85rem; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-bottom: 30px; }
+        .footer-grid h4 { color: var(--white); margin-bottom: 10px; }
+        .footer-grid a { color: var(--accent); text-decoration: underline; }
+        .copyright { text-align: center; border-top: 1px solid #374151; padding-top: 20px; margin-top: 20px; }
 
         @media (max-width: 768px) {
-            .header-grid { flex-direction: column; gap: 15px; }
-            nav ul { flex-wrap: wrap; justify-content: center; }
-            .about-grid, .contact-grid { grid-template-columns: 1fr; }
-            .hero { padding: 60px 20px; }
+            .nav-wrapper { flex-direction: column; gap: 15px; }
+            .contact-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Banner de Advertencia (Protege la cuenta) -->
-    <div class="legal-banner">
-        <strong>Aviso de Transparencia:</strong> Este es un sitio de consultoría y asesoría profesional independiente administrado por Victor Hugo Rios Linares. <strong>NO somos una entidad bancaria ni financiera.</strong>
-    </div>
-
     <!-- Header -->
     <header>
-        <div class="container header-grid">
-            <div class="logo">
-                <h1>Victor Hugo <span>Rios Linares</span></h1>
-            </div>
+        <div class="container nav-wrapper">
+            <div class="logo">Tu Empresa / Tu Nombre</div>
             <nav>
                 <ul>
                     <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#sobre-mi">Sobre Mí</a></li>
                     <li><a href="#contacto">Contacto</a></li>
                 </ul>
             </nav>
-            <a href="#contacto" class="btn">Consulta Privada</a>
         </div>
     </header>
 
     <!-- Hero -->
     <section class="hero">
         <div class="container">
-            <h2>Asesoría Estratégica para Proteger tus Intereses</h2>
-            <p>Brindamos consultoría profesional, transparente y confidencial para personas y empresas que buscan resolver situaciones complejas.</p>
-            <a href="#contacto" class="btn btn-outline">Agendar Consulta</a>
+            <h1>Asesoría Profesional Transparente y Confidencial</h1>
+            <p>Brindamos servicios de consultoría estratégica diseñados para resolver tus necesidades con la mayor ética y profesionalismo. No hacemos promesas falsas, ofrecemos soluciones reales.</p>
+            <a href="#contacto" class="btn">Solicitar Información</a>
         </div>
     </section>
 
@@ -145,44 +107,16 @@
         <h2 class="section-title">Nuestros Servicios</h2>
         <div class="grid">
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80" alt="Consultoría Estratégica">
-                <div class="card-content">
-                    <h3>Consultoría Estratégica</h3>
-                    <p>Análisis profundo de tu situación para ofrecerte un plan de acción claro y soluciones a la medida de tus necesidades.</p>
-                </div>
+                <h3>Consultoría Especializada</h3>
+                <p>Análisis detallado de tu situación para ofrecerte un panorama claro y opciones viables apegadas a la ley.</p>
             </div>
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=600&q=80" alt="Asesoría Financiera">
-                <div class="card-content">
-                    <h3>Asesoría Financiera</h3>
-                    <p>Orientación profesional para la gestión de tus recursos, planificación de presupuestos y toma de decisiones económicas.</p>
-                </div>
+                <h3>Asesoría Personalizada</h3>
+                <p>Atención uno a uno, entendiendo tus necesidades particulares para diseñar una estrategia a tu medida.</p>
             </div>
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80" alt="Acompañamiento Profesional">
-                <div class="card-content">
-                    <h3>Acompañamiento Profesional</h3>
-                    <p>Te guiamos paso a paso en la resolución de conflictos o trámites complejos, asegurando transparencia en cada etapa.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sobre Mí -->
-    <section id="sobre-mi" class="about">
-        <div class="container about-grid">
-            <div class="about-img">
-                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80" alt="Victor Hugo Rios Linares">
-            </div>
-            <div class="about-text">
-                <h2>Compromiso y Profesionalismo</h2>
-                <p>Soy <strong>Victor Hugo Rios Linares</strong>, profesional dedicado a brindar asesoría de alta calidad con un enfoque ético y transparente.</p>
-                <p>Mi prioridad es que cada cliente reciba una atención personalizada, entendiendo a fondo su situación para ofrecer la mejor solución posible, siempre apegada a la ley y a las buenas prácticas.</p>
-                <ul>
-                    <li>Atención 100% confidencial.</li>
-                    <li>Análisis honesto y sin promesas falsas.</li>
-                    <li>Respuesta rápida en horario laboral.</li>
-                </ul>
+                <h3>Acompañamiento Continuo</h3>
+                <p>Te guiamos a través del proceso, manteniendo una comunicación transparente en cada etapa del servicio.</p>
             </div>
         </div>
     </section>
@@ -191,37 +125,37 @@
     <section id="contacto" class="contact">
         <div class="container contact-grid">
             <div class="contact-info">
-                <h2>Contáctame</h2>
-                <p>Agenda una consulta inicial para evaluar tu caso. Estoy aquí para escucharte y ofrecerte una guía profesional.</p>
-                <ul class="contact-list">
-                    <li><strong>📍 Dirección:</strong> Oficina Central, Zona 1, Ciudad.</li>
-                    <li><strong>📞 Teléfono:</strong> +502 0000 0000</li>
-                    <li><strong>✉️ Correo:</strong> contacto@victorhugorios.com</li>
-                </ul>
+                <h2>Contáctanos</h2>
+                <p>Déjanos tus datos y un asesor se pondrá en contacto contigo a la brevedad posible para evaluar tu caso sin compromiso.</p>
+                <div class="info-item">📍 <strong>Dirección:</strong> Calle Falsa 123, Ciudad.</div>
+                <div class="info-item">📞 <strong>Teléfono:</strong> +00 000 000 000</div>
+                <div class="info-item">✉️ <strong>Correo:</strong> contacto@tuempresa.com</div>
             </div>
-            <div class="contact-form-wrap">
+            
+            <div class="contact-form">
+                <!-- REEMPLAZA EL '#' POR TU URL DE FORMSPREE SI QUIERES RECIBIR CORREOS -->
                 <form action="#" method="POST">
                     <div class="form-group">
-                        <label for="nombre">Nombre completo *</label>
-                        <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+                        <label for="nombre">Nombre Completo *</label>
+                        <input type="text" id="nombre" name="nombre" required placeholder="Ej. Juan Pérez">
                     </div>
                     <div class="form-group">
-                        <label for="email">Correo electrónico *</label>
-                        <input type="email" id="email" name="email" required placeholder="tu@correo.com">
+                        <label for="email">Correo Electrónico *</label>
+                        <input type="email" id="email" name="email" required placeholder="juan@correo.com">
                     </div>
                     <div class="form-group">
                         <label for="telefono">Teléfono *</label>
-                        <input type="tel" id="telefono" name="telefono" required placeholder="+502 0000 0000">
+                        <input type="tel" id="telefono" name="telefono" required placeholder="+00 000 000 000">
                     </div>
                     <div class="form-group">
-                        <label for="mensaje">Mensaje o consulta *</label>
-                        <textarea id="mensaje" name="mensaje" rows="4" required placeholder="Describe brevemente en qué puedo ayudarte..."></textarea>
+                        <label for="mensaje">Mensaje *</label>
+                        <textarea id="mensaje" name="mensaje" rows="3" required placeholder="Describe brevemente tu consulta..."></textarea>
                     </div>
-                    <div class="form-group checkbox-group">
+                    <div class="checkbox-group">
                         <input type="checkbox" id="privacidad" name="privacidad" required>
-                        <label for="privacidad">Acepto la <a href="privacidad.html">Política de Privacidad</a>. Entiendo que este sitio es de consultoría y no una entidad bancaria. *</label>
+                        <label for="privacidad">He leído y acepto la <a href="privacidad.html" target="_blank">Política de Privacidad</a> y los <a href="terminos.html" target="_blank">Términos y Condiciones</a>. *</label>
                     </div>
-                    <button type="submit" class="btn" style="width: 100%;">Enviar Consulta</button>
+                    <button type="submit" class="btn" style="width: 100%;">Enviar Mensaje</button>
                 </form>
             </div>
         </div>
@@ -232,30 +166,23 @@
         <div class="container">
             <div class="footer-grid">
                 <div>
-                    <h4>Victor Hugo Rios Linares</h4>
-                    <p>Consultoría y asesoría profesional independiente.</p>
+                    <h4>Tu Empresa / Tu Nombre</h4>
+                    <p>Servicios de consultoría y asesoría profesional independiente. Operando bajo estrictos estándares éticos y legales.</p>
                 </div>
                 <div>
                     <h4>Enlaces Legales</h4>
-                    <p><a href="privacidad.html" style="color: var(--accent);">Política de Privacidad</a></p>
-                    <p><a href="terminos.html" style="color: var(--accent);">Términos y Condiciones</a></p>
+                    <p><a href="privacidad.html">Política de Privacidad</a></p>
+                    <p><a href="terminos.html">Términos y Condiciones</a></p>
                 </div>
                 <div>
-                    <h4>Administración</h4>
-                    <p>Titular del sitio y anunciante:</p>
-                    <p><strong style="color: var(--white);">Victor Hugo Rios Linares</strong></p>
+                    <h4>Aviso de Transparencia</h4>
+                    <p>Este sitio web es operado de forma independiente. <strong>No somos una entidad bancaria ni financiera</strong>, y no solicitamos contraseñas ni datos de tarjetas de crédito.</p>
                 </div>
             </div>
-            
-            <div class="legal-disclaimer">
-                <p><strong>Aviso Legal Importante:</strong> Este sitio web es operado de manera independiente por Victor Hugo Rios Linares. <strong>NO somos una entidad bancaria, financiera ni un despacho de cobranza.</strong> No solicitamos contraseñas, datos de tarjetas de crédito ni acceso a cuentas bancarias. Toda la información aquí presentada es de carácter informativo sobre servicios de consultoría.</p>
-            </div>
-
             <div class="copyright">
-                <p>© 2026 Victor Hugo Rios Linares. Todos los derechos reservados.</p>
+                <p>&copy; 2026 Tu Empresa / Tu Nombre. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
-
 </body>
 </html>

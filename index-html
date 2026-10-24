@@ -3,21 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consultoría y Asesoría Profesional | Nombre de tu Empresa</title>
-    <meta name="description" content="Servicios profesionales de consultoría y asesoría estratégica para personas y empresas. Atención personalizada, transparente y confidencial.">
+    <title>Consultoría Profesional | Soluciones Estratégicas</title>
+    <meta name="description" content="Servicios de consultoría y asesoría estratégica para personas y empresas. Atención personalizada y confidencial.">
     <meta name="robots" content="index, follow">
     
     <!-- Fuentes de Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     
+    <!-- CSS INTEGRADO (Para que nunca falle) -->
     <style>
         :root {
-            --primary: #1E3A8A; /* Azul oscuro profesional */
-            --accent: #3B82F6;  /* Azul brillante */
-            --bg: #F3F4F6;
-            --text: #1F2937;
+            --primary: #0F172A; /* Azul muy oscuro */
+            --accent: #0EA5E9;  /* Azul cielo */
+            --bg: #F8FAFC;
+            --text: #334155;
             --white: #FFFFFF;
         }
 
@@ -25,98 +26,134 @@
         body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
         a { text-decoration: none; color: inherit; }
         ul { list-style: none; }
-        
+        img { max-width: 100%; display: block; }
+
+        /* Banner de Advertencia (Seguridad para Google Ads) */
+        .legal-banner { background: #FEF2F2; color: #991B1B; text-align: center; padding: 10px; font-size: 0.85rem; border-bottom: 2px solid #F87171; }
+        .legal-banner strong { font-weight: 700; }
+
         /* Header */
-        header { background: var(--primary); color: var(--white); padding: 20px 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        .container { width: 90%; max-width: 1100px; margin: 0 auto; }
-        .nav-wrapper { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.5px; }
-        nav ul { display: flex; gap: 20px; font-weight: 600; font-size: 0.9rem; }
-        nav a:hover { color: #93C5FD; }
+        header { background: var(--white); padding: 15px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; }
+        .container { width: 90%; max-width: 1200px; margin: 0 auto; }
+        .header-content { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.4rem; font-weight: 700; color: var(--primary); letter-spacing: -0.5px; }
+        .logo span { color: var(--accent); }
+        nav ul { display: flex; gap: 25px; font-weight: 600; font-size: 0.9rem; }
+        nav a:hover { color: var(--accent); }
+        .btn-header { background: var(--accent); color: var(--white); padding: 10px 20px; border-radius: 6px; font-weight: 600; transition: 0.3s; }
+        .btn-header:hover { background: var(--primary); }
 
         /* Hero */
-        .hero { background: var(--white); padding: 80px 0; text-align: center; border-bottom: 1px solid #E5E7EB; }
-        .hero h1 { font-size: clamp(2rem, 5vw, 3rem); color: var(--primary); margin-bottom: 20px; line-height: 1.2; }
-        .hero p { font-size: 1.1rem; color: #4B5563; max-width: 700px; margin: 0 auto 30px; }
-        .btn { display: inline-block; padding: 14px 28px; background: var(--accent); color: var(--white); font-weight: 700; border-radius: 6px; transition: 0.3s; border: none; cursor: pointer; }
-        .btn:hover { background: var(--primary); transform: translateY(-2px); }
+        .hero { background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80') center/cover; padding: 120px 20px; text-align: center; color: var(--white); }
+        .hero h1 { font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 20px; line-height: 1.1; }
+        .hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto 40px; opacity: 0.9; }
+        .btn-hero { display: inline-block; padding: 16px 32px; background: var(--accent); color: var(--white); font-weight: 700; font-size: 1.1rem; border-radius: 8px; transition: 0.3s; border: none; cursor: pointer; }
+        .btn-hero:hover { background: #0284C7; transform: translateY(-2px); }
 
         /* Servicios */
-        .services { padding: 80px 0; }
-        .section-title { text-align: center; font-size: 2rem; color: var(--primary); margin-bottom: 40px; }
+        .services { padding: 100px 0; }
+        .section-header { text-align: center; margin-bottom: 60px; }
+        .section-header h2 { font-size: 2.2rem; color: var(--primary); margin-bottom: 15px; }
+        .section-header p { color: #64748B; font-size: 1.1rem; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .card { background: var(--white); padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-top: 4px solid var(--accent); text-align: center; }
-        .card h3 { font-size: 1.2rem; margin-bottom: 10px; color: var(--primary); }
-        .card p { color: #4B5563; font-size: 0.95rem; }
+        .card { background: var(--white); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.05); transition: 0.3s; }
+        .card:hover { transform: translateY(-8px); box-shadow: 0 12px 30px rgba(0,0,0,0.1); }
+        .card img { width: 100%; height: 220px; object-fit: cover; }
+        .card-body { padding: 30px; }
+        .card h3 { font-size: 1.3rem; color: var(--primary); margin-bottom: 12px; }
+        .card p { color: #64748B; font-size: 0.95rem; }
 
         /* Contacto */
-        .contact { background: var(--primary); color: var(--white); padding: 80px 0; }
-        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
-        .contact-info h2 { font-size: 2rem; margin-bottom: 20px; }
-        .contact-info p { color: #D1D5DB; margin-bottom: 30px; }
+        .contact { background: var(--primary); padding: 100px 0; color: var(--white); }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .contact-info h2 { font-size: 2.5rem; margin-bottom: 20px; }
+        .contact-info p { color: #CBD5E1; font-size: 1.1rem; margin-bottom: 30px; }
         .info-item { margin-bottom: 15px; font-size: 1rem; }
-        .contact-form { background: var(--white); padding: 40px; border-radius: 8px; color: var(--text); }
+        
+        .form-container { background: var(--white); padding: 40px; border-radius: 12px; color: var(--text); box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
         .form-group { margin-bottom: 20px; }
-        .form-group label { display: block; font-weight: 600; font-size: 0.9rem; margin-bottom: 5px; }
-        .form-group input, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #D1D5DB; border-radius: 4px; font-family: inherit; }
-        .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--accent); }
+        .form-group label { display: block; font-weight: 600; font-size: 0.9rem; margin-bottom: 8px; color: var(--primary); }
+        .form-group input, .form-group textarea { width: 100%; padding: 14px; border: 1px solid #E2E8F0; border-radius: 6px; font-family: inherit; font-size: 1rem; }
+        .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1); }
         .checkbox-group { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 20px; }
-        .checkbox-group input { width: auto; margin-top: 4px; }
-        .checkbox-group label { font-weight: 400; font-size: 0.85rem; color: #6B7280; }
+        .checkbox-group input { width: auto; margin-top: 5px; }
+        .checkbox-group label { font-weight: 400; font-size: 0.85rem; color: #64748B; margin-bottom: 0; }
         .checkbox-group a { color: var(--accent); text-decoration: underline; }
 
         /* Footer */
-        footer { background: #111827; color: #9CA3AF; padding: 40px 0 20px; font-size: 0.85rem; }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-bottom: 30px; }
-        .footer-grid h4 { color: var(--white); margin-bottom: 10px; }
-        .footer-grid a { color: var(--accent); text-decoration: underline; }
-        .copyright { text-align: center; border-top: 1px solid #374151; padding-top: 20px; margin-top: 20px; }
+        footer { background: #020617; color: #94A3B8; padding: 60px 0 20px; font-size: 0.9rem; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px; }
+        .footer-grid h4 { color: var(--white); margin-bottom: 15px; font-size: 1.1rem; }
+        .footer-grid a { color: var(--accent); display: block; margin-bottom: 8px; }
+        .footer-grid a:hover { text-decoration: underline; }
+        .copyright { text-align: center; border-top: 1px solid #1E293B; padding-top: 20px; margin-top: 20px; font-size: 0.85rem; }
 
         @media (max-width: 768px) {
-            .nav-wrapper { flex-direction: column; gap: 15px; }
+            .header-content { flex-direction: column; gap: 15px; }
+            nav ul { flex-wrap: wrap; justify-content: center; }
             .contact-grid { grid-template-columns: 1fr; }
+            .hero { padding: 80px 20px; }
         }
     </style>
 </head>
 <body>
 
+    <!-- Banner de Advertencia (Obligatorio para evitar suspensiones) -->
+    <div class="legal-banner">
+        <strong>Aviso de Transparencia:</strong> Este es un sitio web de consultoría independiente. No somos una entidad bancaria ni solicitamos credenciales de acceso.
+    </div>
+
     <!-- Header -->
     <header>
-        <div class="container nav-wrapper">
-            <div class="logo">Tu Empresa / Tu Nombre</div>
+        <div class="container header-content">
+            <div class="logo">Consultoría<span>Pro</span></div>
             <nav>
                 <ul>
                     <li><a href="#servicios">Servicios</a></li>
                     <li><a href="#contacto">Contacto</a></li>
                 </ul>
             </nav>
+            <a href="#contacto" class="btn-header">Agendar Consulta</a>
         </div>
     </header>
 
-    <!-- Hero -->
+    <!-- Hero (Imagen de Unsplash) -->
     <section class="hero">
         <div class="container">
-            <h1>Asesoría Profesional Transparente y Confidencial</h1>
-            <p>Brindamos servicios de consultoría estratégica diseñados para resolver tus necesidades con la mayor ética y profesionalismo. No hacemos promesas falsas, ofrecemos soluciones reales.</p>
-            <a href="#contacto" class="btn">Solicitar Información</a>
+            <h1>Soluciones Estratégicas para tus Desafíos</h1>
+            <p>Brindamos asesoría profesional y confidencial para ayudarte a tomar decisiones informadas y resolver situaciones complejas.</p>
+            <a href="#contacto" class="btn-hero">Solicitar Información</a>
         </div>
     </section>
 
-    <!-- Servicios -->
+    <!-- Servicios (Imágenes de Unsplash) -->
     <section id="servicios" class="services container">
-        <h2 class="section-title">Nuestros Servicios</h2>
+        <div class="section-header">
+            <h2>Nuestras Áreas de Especialidad</h2>
+            <p>Servicios diseñados para proteger tus intereses y potenciar tus proyectos.</p>
+        </div>
+        
         <div class="grid">
             <div class="card">
-                <h3>Consultoría Especializada</h3>
-                <p>Análisis detallado de tu situación para ofrecerte un panorama claro y opciones viables apegadas a la ley.</p>
+                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80" alt="Consultoría Estratégica">
+                <div class="card-body">
+                    <h3>Consultoría Estratégica</h3>
+                    <p>Análisis profundo de tu situación actual para diseñar un plan de acción claro y orientado a resultados.</p>
+                </div>
             </div>
             <div class="card">
-                <h3>Asesoría Personalizada</h3>
-                <p>Atención uno a uno, entendiendo tus necesidades particulares para diseñar una estrategia a tu medida.</p>
+                <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=600&q=80" alt="Asesoría Financiera">
+                <div class="card-body">
+                    <h3>Asesoría Financiera</h3>
+                    <p>Orientación profesional para la gestión de recursos, planificación de presupuestos y decisiones económicas.</p>
+                </div>
             </div>
             <div class="card">
-                <h3>Acompañamiento Continuo</h3>
-                <p>Te guiamos a través del proceso, manteniendo una comunicación transparente en cada etapa del servicio.</p>
+                <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80" alt="Acompañamiento Profesional">
+                <div class="card-body">
+                    <h3>Acompañamiento Profesional</h3>
+                    <p>Te guiamos paso a paso en la resolución de conflictos o trámites complejos, asegurando transparencia total.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -125,23 +162,23 @@
     <section id="contacto" class="contact">
         <div class="container contact-grid">
             <div class="contact-info">
-                <h2>Contáctanos</h2>
-                <p>Déjanos tus datos y un asesor se pondrá en contacto contigo a la brevedad posible para evaluar tu caso sin compromiso.</p>
-                <div class="info-item">📍 <strong>Dirección:</strong> Calle Falsa 123, Ciudad.</div>
+                <h2>Hablemos de tu Caso</h2>
+                <p>Déjanos tus datos y un asesor se comunicará contigo para evaluar tu situación sin compromiso.</p>
+                <div class="info-item">📍 <strong>Oficina Central:</strong> Av. Principal, Edificio Business, Piso 4.</div>
                 <div class="info-item">📞 <strong>Teléfono:</strong> +00 000 000 000</div>
-                <div class="info-item">✉️ <strong>Correo:</strong> contacto@tuempresa.com</div>
+                <div class="info-item">✉️ <strong>Correo:</strong> contacto@consultoriapro.com</div>
             </div>
             
-            <div class="contact-form">
+            <div class="form-container">
                 <!-- REEMPLAZA EL '#' POR TU URL DE FORMSPREE SI QUIERES RECIBIR CORREOS -->
                 <form action="#" method="POST">
                     <div class="form-group">
                         <label for="nombre">Nombre Completo *</label>
-                        <input type="text" id="nombre" name="nombre" required placeholder="Ej. Juan Pérez">
+                        <input type="text" id="nombre" name="nombre" required placeholder="Ej. Carlos Mendoza">
                     </div>
                     <div class="form-group">
                         <label for="email">Correo Electrónico *</label>
-                        <input type="email" id="email" name="email" required placeholder="juan@correo.com">
+                        <input type="email" id="email" name="email" required placeholder="carlos@correo.com">
                     </div>
                     <div class="form-group">
                         <label for="telefono">Teléfono *</label>
@@ -149,13 +186,13 @@
                     </div>
                     <div class="form-group">
                         <label for="mensaje">Mensaje *</label>
-                        <textarea id="mensaje" name="mensaje" rows="3" required placeholder="Describe brevemente tu consulta..."></textarea>
+                        <textarea id="mensaje" name="mensaje" rows="4" required placeholder="Describe brevemente en qué podemos ayudarte..."></textarea>
                     </div>
                     <div class="checkbox-group">
                         <input type="checkbox" id="privacidad" name="privacidad" required>
-                        <label for="privacidad">He leído y acepto la <a href="privacidad.html" target="_blank">Política de Privacidad</a> y los <a href="terminos.html" target="_blank">Términos y Condiciones</a>. *</label>
+                        <label for="privacidad">Acepto la <a href="privacidad.html" target="_blank">Política de Privacidad</a> y los <a href="terminos.html" target="_blank">Términos y Condiciones</a>. *</label>
                     </div>
-                    <button type="submit" class="btn" style="width: 100%;">Enviar Mensaje</button>
+                    <button type="submit" class="btn-hero" style="width: 100%;">Enviar Consulta</button>
                 </form>
             </div>
         </div>
@@ -166,21 +203,21 @@
         <div class="container">
             <div class="footer-grid">
                 <div>
-                    <h4>Tu Empresa / Tu Nombre</h4>
-                    <p>Servicios de consultoría y asesoría profesional independiente. Operando bajo estrictos estándares éticos y legales.</p>
+                    <h4>ConsultoríaPro</h4>
+                    <p>Servicios profesionales de consultoría y asesoría independiente. Operando bajo estrictos estándares éticos.</p>
                 </div>
                 <div>
                     <h4>Enlaces Legales</h4>
-                    <p><a href="privacidad.html">Política de Privacidad</a></p>
-                    <p><a href="terminos.html">Términos y Condiciones</a></p>
+                    <a href="privacidad.html">Política de Privacidad</a>
+                    <a href="terminos.html">Términos y Condiciones</a>
                 </div>
                 <div>
-                    <h4>Aviso de Transparencia</h4>
+                    <h4>Aviso Importante</h4>
                     <p>Este sitio web es operado de forma independiente. <strong>No somos una entidad bancaria ni financiera</strong>, y no solicitamos contraseñas ni datos de tarjetas de crédito.</p>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2026 Tu Empresa / Tu Nombre. Todos los derechos reservados.</p>
+                <p>&copy; 2026 ConsultoríaPro. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
